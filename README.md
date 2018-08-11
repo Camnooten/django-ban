@@ -16,7 +16,7 @@ Django app that adds bans and warnings to the user system.
     
 
     ```
-    MIDDLEWARE_CLASSES = [
+    MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
