@@ -10,27 +10,21 @@ Django app that adds bans and warnings to the user system.
 
 - Add `ban` folder to Python path.
 - Add `"ban"` to your `INSTALLED_APPS`.
-- Add `ban.middleware.BanAuthenticationMiddleware` to `MIDDLEWARE_CLASSES` in your `settings.py`. Make sure you place it AFTER:
-    - `django.contrib.auth.middleware.AuthenticationMiddleware`
-    - `django.contrib.auth.middleware.SessionAuthenticationMiddleware`
-    - `django.contrib.messages.middleware.MessageMiddleware` (if you use it)
+- Add `ban.middleware.BanAuthenticationMiddleware` to `MIDDLEWARE` in your `settings.py`.
     
     Example:
     
 
     ```
     MIDDLEWARE_CLASSES = [
-        'django.middleware.security.SecurityMiddleware',
-        'django.contrib.sessions.middleware.SessionMiddleware',
-        'django.middleware.common.CommonMiddleware',
-        'django.middleware.csrf.CsrfViewMiddleware',
-        'django.contrib.auth.middleware.AuthenticationMiddleware',
-        'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
-        'django.contrib.messages.middleware.MessageMiddleware',
-    
-        'ban.middleware.BanAuthenticationMiddleware',
-    
-        'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'ban.middleware.BanAuthenticationMiddleware',
     ]
     ```
 
@@ -76,7 +70,7 @@ To run all the tests simply type:
 
 ## Notes
 
-This package was tested with Python 3.4 and Django 1.8.
+This package was tested with Python 3.5 and Django 2.0.
 
 ## License
 
