@@ -8,7 +8,7 @@ Django app that adds bans and warnings to the user system.
 
 ## Installation
 
-- Add `ban` folder to Python path.
+- Add `ban` folder to your Python path site-packages directory.
 - Add `"ban"` to your `INSTALLED_APPS`.
 - Add `ban.middleware.BanAuthenticationMiddleware` to `MIDDLEWARE` in your `settings.py`.
     
