@@ -28,6 +28,6 @@ class BanAuthenticationMiddleware(MiddlewareMixin):
                         messages.add_message(request, messages.WARNING, 'This account has been banned.')
                     except messages.MessageFailure:
                         pass
-                    return HttpResponseRedirect(settings.LOGIN_URL)
+                    return HttpResponseRedirect(settings.LOGIN_REDIRECT_URL)
 
         return None
