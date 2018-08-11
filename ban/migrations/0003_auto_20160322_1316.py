@@ -17,13 +17,13 @@ class Migration(migrations.Migration):
             name='Warn',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', primary_key=True, serialize=False, auto_created=True)),
-                ('creator', models.ForeignKey(to=settings.AUTH_USER_MODEL, related_name='warn_creator')),
-                ('receiver', models.ForeignKey(to=settings.AUTH_USER_MODEL)),
+                ('creator', models.ForeignKey(to=settings.AUTH_USER_MODEL, related_name='warn_creator', on_delete=models.CASCADE)),
+                ('receiver', models.ForeignKey(to=settings.AUTH_USER_MODEL, on_delete=models.CASCADE)),
             ],
         ),
         migrations.AlterField(
             model_name='ban',
             name='creator',
-            field=models.ForeignKey(to=settings.AUTH_USER_MODEL, related_name='ban_creator'),
+            field=models.ForeignKey(to=settings.AUTH_USER_MODEL, related_name='ban_creator', on_delete=models.CASCADE),
         ),
     ]
