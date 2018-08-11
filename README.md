@@ -24,6 +24,7 @@ Django app that adds bans and warnings to the user system.
         'django.contrib.auth.middleware.AuthenticationMiddleware',
         'django.contrib.messages.middleware.MessageMiddleware',
         'django.middleware.common.CommonMiddleware',
+        # ...
         'ban.middleware.BanAuthenticationMiddleware',
     ]
     ```
