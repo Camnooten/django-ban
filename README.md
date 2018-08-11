@@ -8,8 +8,8 @@ Django app that adds bans and warnings to the user system.
 
 ## Installation
 
-- Add `ban` folder to your Python path site-packages directory.
-- Add `"ban"` to your `INSTALLED_APPS`.
+- Add the `ban` folder to your Python path site-packages directory.
+- Add the `"ban"` app to your `INSTALLED_APPS`.
 - Add `ban.middleware.BanAuthenticationMiddleware` to `MIDDLEWARE` in your `settings.py`.
     
     Example:
@@ -17,14 +17,14 @@ Django app that adds bans and warnings to the user system.
 
     ```
     MIDDLEWARE = [
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'ban.middleware.BanAuthenticationMiddleware',
+        'django.middleware.common.CommonMiddleware',
+        'django.middleware.security.SecurityMiddleware',
+        'django.contrib.sessions.middleware.SessionMiddleware',
+        'django.middleware.csrf.CsrfViewMiddleware',
+        'django.contrib.auth.middleware.AuthenticationMiddleware',
+        'django.contrib.messages.middleware.MessageMiddleware',
+        'django.middleware.common.CommonMiddleware',
+        'ban.middleware.BanAuthenticationMiddleware',
     ]
     ```
 
