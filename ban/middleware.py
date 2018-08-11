@@ -5,11 +5,11 @@ from django.contrib.auth import authenticate
 from django.contrib import messages
 from django.db.models import Q
 from django.http import HttpResponseRedirect
-
+from django.utils.deprecation import MiddlewareMixin
 from ban.models import Ban
 
 
-class BanAuthenticationMiddleware(object):
+class BanAuthenticationMiddleware(MiddlewareMixin):
 
     def process_request(self, request):
 
