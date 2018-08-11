@@ -15,6 +15,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='ban',
             name='creator',
-            field=models.ForeignKey(default=None, null=True, blank=True, related_name='ban_creator', to=settings.AUTH_USER_MODEL, on_delte=models.CASCADE),
+            field=models.ForeignKey(default=None, null=True, blank=True, related_name='ban_creator', to=settings.AUTH_USER_MODEL, on_delete=models.CASCADE),
         ),
     ]
