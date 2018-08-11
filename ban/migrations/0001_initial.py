@@ -17,8 +17,8 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, verbose_name='ID', serialize=False, primary_key=True)),
                 ('end_date', models.DateTimeField(null=True, default=None)),
-                ('creator', models.ForeignKey(to=settings.AUTH_USER_MODEL, related_name='creator')),
-                ('receiver', models.ForeignKey(unique=True, to=settings.AUTH_USER_MODEL)),
+                ('creator', models.ForeignKey(to=settings.AUTH_USER_MODEL, related_name='creator', on_delete=models.CASCADE)),
+                ('receiver', models.ForeignKey(unique=True, to=settings.AUTH_USER_MODEL, on_delete=models.CASCADE)),
             ],
         ),
     ]
