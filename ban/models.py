@@ -17,7 +17,7 @@ class Ban(models.Model):
 
 
 class Warn(models.Model):
-    receiver = models.ForeignKey(USER_MODEL)
+    receiver = models.ForeignKey(USER_MODEL, on_delete=models.CASCADE)
     creator = models.ForeignKey(USER_MODEL, related_name='warn_creator', on_delete=models.CASCADE)
 
 
